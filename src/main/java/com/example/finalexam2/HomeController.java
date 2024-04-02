@@ -76,6 +76,7 @@ public class HomeController {
     }
 
     public void removeSP(ActionEvent actionEvent) {
+        //
         data.remove(tableView.getSelectionModel().getSelectedItem());
     }
     public void removeNV(ActionEvent actionEvent) {
