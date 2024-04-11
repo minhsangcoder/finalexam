@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2601eb9-57ed-4bcd-882f-c5a7d25e2734" name="Changes" comment="Sign In">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/BanSanPham.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/DonHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/DonHang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/NhanVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/NhanVien.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/RegisterController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/SanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/SanPham.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/register.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="c2601eb9-57ed-4bcd-882f-c5a7d25e2734" name="Changes" comment="Sign In" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712661087990</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sign In">
+      <option name="closed" value="true" />
+      <created>1712850570845</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712850570845</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
