@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2601eb9-57ed-4bcd-882f-c5a7d25e2734" name="Changes" comment="&lt;cvcc">
-      <change afterPath="$PROJECT_DIR$/src/account.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/RegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/jensd/fx/glyphs/fontawesome/FontAwesomeIcon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c2601eb9-57ed-4bcd-882f-c5a7d25e2734" name="Changes" comment="Sign In">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/SignUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/BanSanPham.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/DonHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/DonHang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/NhanVien.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/NhanVien.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/RegisterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/SanPham.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/SanPham.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/img/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/register.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,28 +64,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.Home.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/MSang2k5/IdeaProjects/finalexam/src/main/java/com/example/finalexam2",
-    "last_opened_file_path": "C:/Users/MSang2k5/Downloads/jar_files (1)/fontawesomefx-8.2.jar",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Home.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/MSang2k5/IdeaProjects/finalexam/src/main/java/com/example/finalexam2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSang2k5/Downloads/testproject (2)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\IdeaProjects\FinalExam2\src\main\resources\com\example\finalexam2\img" />
@@ -117,11 +120,20 @@
       <option name="project" value="LOCAL" />
       <updated>1712064191118</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Sign In">
+      <option name="closed" value="true" />
+      <created>1712661087990</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712661087990</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&lt;cvcc" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;cvcc" />
+    <MESSAGE value="Sign In" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sign In" />
   </component>
 </project>

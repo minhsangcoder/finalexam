@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,29 +18,32 @@ public class HomeController {
     public AnchorPane nhanSu;
     public AnchorPane donHang;
     public AnchorPane thongTinSanPham;
-    public TableView<SanPham> tableView;
+    public TableView<SanPham> tableViewThongTinSanPham;
 
     public static ObservableList<SanPham> data = FXCollections.observableArrayList();
     public static ObservableList<NhanVien> dataNV = FXCollections.observableArrayList();
+    public static ObservableList<DonHang> dataDonHang = FXCollections.observableArrayList();
     public TextField maSP;
     public TextField nameSP;
     public TextField quanSP;
     public TextField giaSP;
     public TextField SoLuong;
     public TableView<NhanVien> tableViewNhanVien;
+    public TableView<DonHang> tableViewDonHang;
     public TextField maNhanVien;
     public TextField tenNhanVien;
     public TextField chucVu;
 
-    public void initialize(){
-        tableView.setItems(data);
+    public void initialize() {
+        tableViewThongTinSanPham.setItems(data);
         tableViewNhanVien.setItems(dataNV);
+        tableViewDonHang.setItems(dataDonHang);
     }
 
 
     private void show(AnchorPane paneToShow) {
         Object edit;
-        List<AnchorPane> allPanes = Arrays.asList(nhanSu, donHang, khachHang, doanhThu,thongTinSanPham);
+        List<AnchorPane> allPanes = Arrays.asList(nhanSu, donHang, doanhThu, thongTinSanPham);
         for (AnchorPane pane : allPanes) {
             if (pane != paneToShow) {
                 pane.setVisible(false);
@@ -56,12 +60,11 @@ public class HomeController {
     public void nhanSu(ActionEvent actionEvent) {
         show(nhanSu);
     }
+
     public void thongTinSanPham(ActionEvent actionEvent) {
         show(thongTinSanPham);
     }
-    public void khachHang(ActionEvent actionEvent) {
-        show(khachHang);
-    }
+
     public void donHang(ActionEvent actionEvent) {
         show(donHang);
     }
@@ -71,19 +74,34 @@ public class HomeController {
         String code = maSP.getText();
         int quan = Integer.parseInt(quanSP.getText());
         double price = Double.parseDouble(giaSP.getText());
-
-        data.add(new SanPham(name,code,quan,price));
+        data.add(new SanPham(name, code, quan, price));
     }
 
     public void removeSP(ActionEvent actionEvent) {
         //
-        data.remove(tableView.getSelectionModel().getSelectedItem());
+        data.remove(tableViewThongTinSanPham.getSelectionModel().getSelectedItem());
     }
+
     public void removeNV(ActionEvent actionEvent) {
         dataNV.remove(tableViewNhanVien.getSelectionModel().getSelectedItem());
     }
 
     public void addDataNV(ActionEvent actionEvent) {
-        dataNV.add(new NhanVien(maNhanVien.getText(),tenNhanVien.getText(),chucVu.getText()));
+        dataNV.add(new NhanVien(maNhanVien.getText(), tenNhanVien.getText(), chucVu.getText()));
+    }
+
+    public void addToCart(ActionEvent actionEvent) {
+        SanPham sp = tableViewThongTinSanPham.getSelectionModel().getSelectedItem();
+        for (int i = 0; i < dataDonHang.size(); i++) {
+            DonHang d = dataDonHang.get(i);
+            if(d.getMaSP() == sp.getCode())
+            {
+                d.setSoLuong(d.getSoLuong() + 1);
+                dataDonHang.set(i,d);
+                return;
+            }
+        }
+
+        dataDonHang.add(new DonHang(sp.getCode(), sp.getName(),1 ,sp.getPrice()));
     }
 }

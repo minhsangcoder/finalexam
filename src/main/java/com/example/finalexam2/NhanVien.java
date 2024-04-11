@@ -1,25 +1,25 @@
 package com.example.finalexam2;
 
 public class NhanVien {
-    private String name;
-    private String code;
-    private String duty;
+    private String nameNV;
+    private String codeNV;
+    private String dutyNV;
 
     public NhanVien (String name,String code,String duty){
-        this.name = name;
-        this.code = code;
-        this.duty = duty;
+        this.nameNV = name;
+        this.codeNV = code;
+        this.dutyNV = duty;
     }
 
     public String getName(){
-        return this.name;
+        return this.nameNV;
     }
 
     public String getCode(){
-        return this.code;
+        return this.codeNV;
     }
 
     public String getDuty(){
-        return this.duty;
+        return this.dutyNV;
     }
 }

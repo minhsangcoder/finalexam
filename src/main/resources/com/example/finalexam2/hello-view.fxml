@@ -29,7 +29,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button fx:id="buttonSignUp" layoutX="324.0" layoutY="281.0" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Sign Up" textFill="#3fa8ef" />
+      <Button fx:id="buttonSignUp" layoutX="324.0" layoutY="281.0" mnemonicParsing="false" onAction="#SignUp" style="-fx-background-color: transparent;" text="Sign Up" textFill="#3fa8ef" />
       <Text layoutX="200.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create A New Account?" />
       <FontAwesomeIcon fill="#4dd3ff" glyphName="USER" layoutX="151.0" layoutY="136.0" size="7em" />
    </children>

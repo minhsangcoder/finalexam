@@ -1,27 +1,27 @@
 package com.example.finalexam2;
 
 public class SanPham {
-    private String name;
-    private String code;
-    private int quantityInStock;
-    public double price;
+    public String nameSP;
+    public String codeSP;
+    public int quantityInStock;
+    public double priceSP;
 
     public SanPham(String name,String code,int quantityInStock,double price){
-        this.name = name;
-        this.code = code;
+        this.nameSP = name;
+        this.codeSP = code;
         this.quantityInStock = quantityInStock;
-        this.price = price;
+        this.priceSP = price;
     }
     public String getName(){
-        return this.name;
+        return this.nameSP;
     }
     public String getCode(){
-        return this.code;
+        return this.codeSP;
     }
     public int getQuantityInStock(){
         return this.quantityInStock;
     }
     public double getPrice(){
-        return this.price;
+        return this.priceSP;
     }
 }
