@@ -55,4 +55,8 @@ public class DonHang {
     private double tinhThanhTien(int soLuong, double donGia) {
         return soLuong * donGia;
     }
+
+    public String getCode() {
+        return maSP;
+    }
 }

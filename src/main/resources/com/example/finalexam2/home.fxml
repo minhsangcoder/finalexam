@@ -49,18 +49,18 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="nhanSu" layoutX="259.0" layoutY="-4.0" prefHeight="602.0" prefWidth="642.0" style="-fx-background-color: #EEEEEE;" visible="false">
+      <AnchorPane fx:id="nhanSu" layoutX="259.0" layoutY="-4.0" prefHeight="602.0" prefWidth="642.0" style="-fx-background-color: #EEEEEE;">
          <children>
             <TableView fx:id="tableViewNhanVien" layoutX="-1.0" layoutY="3.0" prefHeight="339.0" prefWidth="643.0">
               <columns>
                 <TableColumn prefWidth="216.79998779296875" text="Mã Nhân Viên">
                    <cellValueFactory>
-                      <PropertyValueFactory property="code" />
+                      <PropertyValueFactory property="name" />
                    </cellValueFactory>
                 </TableColumn>
                 <TableColumn prefWidth="207.99996948242188" text="Tên Nhân Viên">
                    <cellValueFactory>
-                      <PropertyValueFactory property="name" />
+                      <PropertyValueFactory property="code" />
                    </cellValueFactory>
                 </TableColumn>
                   <TableColumn prefWidth="221.5999755859375" text="Chức Vụ">
@@ -83,14 +83,34 @@
          <children>
             <TableView fx:id="tableViewDonHang" layoutX="-1.0" prefHeight="374.0" prefWidth="643.0">
               <columns>
-                <TableColumn prefWidth="117.60003662109375" text="Mã Sản Phẩm" />
-                <TableColumn prefWidth="127.199951171875" text="Tên Sản Phẩm" />
-                  <TableColumn prefWidth="96.80001831054688" text="Số Lượng" />
-                  <TableColumn prefWidth="120.79998779296875" text="Giá Sản Phẩm" />
-                  <TableColumn prefWidth="181.5999755859375" text="Tổng" />
+                <TableColumn prefWidth="117.60003662109375" text="Mã Sản Phẩm" >
+                 <cellValueFactory>
+                    <PropertyValueFactory property="maSP" />
+                 </cellValueFactory>
+                 </TableColumn>
+                <TableColumn prefWidth="127.199951171875" text="Tên Sản Phẩm" >
+                 <cellValueFactory>
+                    <PropertyValueFactory property="nameSP" />
+                 </cellValueFactory>
+              </TableColumn>
+                  <TableColumn prefWidth="96.80001831054688" text="Số Lượng" >
+                 <cellValueFactory>
+                    <PropertyValueFactory property="soLuong" />
+                 </cellValueFactory>
+              </TableColumn>
+                  <TableColumn prefWidth="120.79998779296875" text="Giá Sản Phẩm" >
+                     <cellValueFactory>
+                        <PropertyValueFactory property="donGia" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="181.5999755859375" text="Tổng" >
+                     <cellValueFactory>
+                        <PropertyValueFactory property="thanhTien" />
+                     </cellValueFactory>
+                  </TableColumn>
               </columns>
             </TableView>
-            <Button layoutX="296.0" layoutY="389.0" mnemonicParsing="false" text="Delete" />
+            <Button layoutX="296.0" layoutY="389.0" mnemonicParsing="false" onAction="#removeDonHang" text="Delete" />
             <AnchorPane layoutX="240.0" layoutY="431.0" prefHeight="113.0" prefWidth="161.0" style="-fx-border-color: black;">
                <children>
                   <Text layoutX="52.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
@@ -98,8 +118,8 @@
                         <Font size="15.0" />
                      </font>
                   </Text>
-                  <Button layoutX="20.0" layoutY="73.0" mnemonicParsing="false" text="Add" />
-                  <Button layoutX="92.0" layoutY="73.0" mnemonicParsing="false" text="Reduce" />
+                  <Button layoutX="20.0" layoutY="73.0" mnemonicParsing="false" onAction="#addToCart" text="Add" />
+                  <Button layoutX="92.0" layoutY="73.0" mnemonicParsing="false" onAction="#giamSoLuongSP" text="Reduce" />
                </children>
             </AnchorPane>
          </children></AnchorPane>

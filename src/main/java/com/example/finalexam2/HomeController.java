@@ -13,7 +13,6 @@ import java.util.List;
 
 public class HomeController {
 
-    public AnchorPane khachHang;
     public AnchorPane doanhThu;
     public AnchorPane nhanSu;
     public AnchorPane donHang;
@@ -93,15 +92,29 @@ public class HomeController {
     public void addToCart(ActionEvent actionEvent) {
         SanPham sp = tableViewThongTinSanPham.getSelectionModel().getSelectedItem();
         for (int i = 0; i < dataDonHang.size(); i++) {
-            DonHang d = dataDonHang.get(i);
-            if(d.getMaSP() == sp.getCode())
-            {
-                d.setSoLuong(d.getSoLuong() + 1);
-                dataDonHang.set(i,d);
+            DonHang dh = dataDonHang.get(i);
+            if (dh.getMaSP() == sp.getCode()) {
+                dh.setSoLuong(dh.getSoLuong() + 1);
+                dataDonHang.set(i, dh);
                 return;
             }
         }
+        dataDonHang.add(new DonHang(sp.getCode(), sp.getName(), 1, sp.getPrice()));
+    }
 
-        dataDonHang.add(new DonHang(sp.getCode(), sp.getName(),1 ,sp.getPrice()));
+    public void removeDonHang(ActionEvent actionEvent) {
+        dataDonHang.remove(tableViewDonHang.getSelectionModel().getSelectedItem());
+    }
+
+    public void giamSoLuongSP(ActionEvent actionEvent) {
+        DonHang d = tableViewDonHang.getSelectionModel().getSelectedItem();
+        for (int i = 0; i < dataDonHang.size(); i++) {
+            DonHang dh = dataDonHang.get(i);
+            if (dh.getMaSP() == d.getCode()) {
+                d.setSoLuong(d.getSoLuong() - 1);
+                dataDonHang.set(i, d);
+                return;
+            }
+        }
     }
 }
