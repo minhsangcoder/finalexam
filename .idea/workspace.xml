@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2601eb9-57ed-4bcd-882f-c5a7d25e2734" name="Changes" comment="Đăng Ký">
-      <change afterPath="$PROJECT_DIR$/src/dulieu.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/DonHang.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/DonHang.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalexam2/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalexam2/home.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712851495484</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Đăng Ký">
+      <option name="closed" value="true" />
+      <created>1712897889569</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712897889569</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

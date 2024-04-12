@@ -111,8 +111,13 @@ public class HomeController {
         for (int i = 0; i < dataDonHang.size(); i++) {
             DonHang dh = dataDonHang.get(i);
             if (dh.getMaSP() == d.getCode()) {
+                if (d.getSoLuong()==1) {
+                    dataDonHang.remove(tableViewDonHang.getSelectionModel().getSelectedItem());
+                }
+                else {
                 d.setSoLuong(d.getSoLuong() - 1);
                 dataDonHang.set(i, d);
+                }
                 return;
             }
         }
