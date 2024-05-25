@@ -14,7 +14,23 @@
 
 <AnchorPane minHeight="600.0" minWidth="900.0" prefHeight="580.0" prefWidth="800.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalexam2.HomeController">
    <children>
-      <AnchorPane fx:id="doanhThu" layoutX="257.0" prefHeight="600.0" prefWidth="643.0" style="-fx-background-color: #EEEEEE;" visible="false" />
+      <AnchorPane fx:id="doanhThu" layoutX="257.0" prefHeight="600.0" prefWidth="643.0" style="-fx-background-color: #EEEEEE;">
+         <children>
+            <TableView fx:id="tableViewDoanhThu" prefHeight="348.0" prefWidth="643.0">
+              <columns>
+                <TableColumn prefWidth="314.3999328613281" text="STT Đơn Hàng">
+                   <cellValueFactory>
+                      <PropertyValueFactory property="STT" />
+                   </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="328.0" text="Số Tiền Kiếm Được" >
+                   <cellValueFactory>
+                      <PropertyValueFactory property="thanhTien" />
+                   </cellValueFactory>
+                </TableColumn>
+              </columns>
+            </TableView>
+         </children></AnchorPane>
       <AnchorPane prefHeight="582.0" prefWidth="258.0" style="-fx-background-color: #00FFFF;">
          <children>
             <Button layoutY="318.0" mnemonicParsing="false" onAction="#doanhThu" prefHeight="80.0" prefWidth="258.0" style="-fx-background-color: transparent; -fx-background-radius: 30px; -fx-border-color: black; -fx-border-image-width: 1px; -fx-border-style: solid;" text="Doanh Thu">
@@ -49,7 +65,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="nhanSu" layoutX="259.0" layoutY="-4.0" prefHeight="602.0" prefWidth="642.0" style="-fx-background-color: #EEEEEE;">
+      <AnchorPane fx:id="nhanSu" layoutX="259.0" layoutY="-4.0" prefHeight="602.0" prefWidth="642.0" style="-fx-background-color: #EEEEEE;" visible="false">
          <children>
             <TableView fx:id="tableViewNhanVien" layoutX="-1.0" layoutY="3.0" prefHeight="339.0" prefWidth="643.0">
               <columns>
@@ -79,38 +95,38 @@
             <TextField fx:id="tenNhanVien" layoutX="179.0" layoutY="418.0" />
             <TextField fx:id="chucVu" layoutX="179.0" layoutY="453.0" />
          </children></AnchorPane>
-      <AnchorPane fx:id="donHang" layoutX="258.0" layoutY="-1.0" prefHeight="600.0" prefWidth="642.0" style="-fx-background-color: #EEEEEE;">
+      <AnchorPane fx:id="donHang" layoutX="258.0" layoutY="-1.0" prefHeight="600.0" prefWidth="642.0" style="-fx-background-color: #EEEEEE;" visible="false">
          <children>
             <TableView fx:id="tableViewDonHang" layoutX="-1.0" prefHeight="374.0" prefWidth="643.0">
               <columns>
-                <TableColumn prefWidth="117.60003662109375" text="Mã Sản Phẩm" >
+                <TableColumn prefWidth="117.60003662109375" text="Mã Sản Phẩm">
                  <cellValueFactory>
                     <PropertyValueFactory property="maSP" />
                  </cellValueFactory>
                  </TableColumn>
-                <TableColumn prefWidth="127.199951171875" text="Tên Sản Phẩm" >
+                <TableColumn prefWidth="127.199951171875" text="Tên Sản Phẩm">
                  <cellValueFactory>
                     <PropertyValueFactory property="nameSP" />
                  </cellValueFactory>
               </TableColumn>
-                  <TableColumn prefWidth="96.80001831054688" text="Số Lượng" >
+                  <TableColumn prefWidth="96.80001831054688" text="Số Lượng">
                  <cellValueFactory>
                     <PropertyValueFactory property="soLuong" />
                  </cellValueFactory>
               </TableColumn>
-                  <TableColumn prefWidth="120.79998779296875" text="Giá Sản Phẩm" >
+                  <TableColumn prefWidth="120.79998779296875" text="Giá Sản Phẩm">
                      <cellValueFactory>
                         <PropertyValueFactory property="donGia" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn prefWidth="181.5999755859375" text="Tổng" >
+                  <TableColumn prefWidth="181.5999755859375" text="Tổng">
                      <cellValueFactory>
                         <PropertyValueFactory property="thanhTien" />
                      </cellValueFactory>
                   </TableColumn>
               </columns>
             </TableView>
-            <Button layoutX="296.0" layoutY="389.0" mnemonicParsing="false" onAction="#removeDonHang" text="Delete" />
+            <Button layoutX="240.0" layoutY="389.0" mnemonicParsing="false" onAction="#removeDonHang" text="Delete" />
             <AnchorPane layoutX="240.0" layoutY="431.0" prefHeight="113.0" prefWidth="161.0" style="-fx-border-color: black;">
                <children>
                   <Text layoutX="52.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
@@ -122,6 +138,7 @@
                   <Button layoutX="92.0" layoutY="73.0" mnemonicParsing="false" onAction="#giamSoLuongSP" text="Reduce" />
                </children>
             </AnchorPane>
+            <Button layoutX="339.0" layoutY="389.0" mnemonicParsing="false" onAction="#payment" text="Payment" />
          </children></AnchorPane>
       <AnchorPane fx:id="thongTinSanPham" layoutX="257.0" layoutY="-1.0" prefHeight="602.0" prefWidth="650.0" style="-fx-background-color: #EEEEEE;" visible="false">
          <children>

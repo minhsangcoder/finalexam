@@ -22,6 +22,7 @@ public class HomeController {
     public static ObservableList<SanPham> data = FXCollections.observableArrayList();
     public static ObservableList<NhanVien> dataNV = FXCollections.observableArrayList();
     public static ObservableList<DonHang> dataDonHang = FXCollections.observableArrayList();
+    public static ObservableList<DoanhThu> dataDoanhThu = FXCollections.observableArrayList();
     public TextField maSP;
     public TextField nameSP;
     public TextField quanSP;
@@ -32,10 +33,12 @@ public class HomeController {
     public TextField maNhanVien;
     public TextField tenNhanVien;
     public TextField chucVu;
+    public TableView<DoanhThu> tableViewDoanhThu;
 
     public void initialize() {
         tableViewThongTinSanPham.setItems(data);
         tableViewNhanVien.setItems(dataNV);
+        tableViewDoanhThu.setItems(dataDoanhThu);
         tableViewDonHang.setItems(dataDonHang);
     }
 
@@ -111,15 +114,27 @@ public class HomeController {
         for (int i = 0; i < dataDonHang.size(); i++) {
             DonHang dh = dataDonHang.get(i);
             if (dh.getMaSP() == d.getCode()) {
-                if (d.getSoLuong()==1) {
+                if (d.getSoLuong() == 1) {
                     dataDonHang.remove(tableViewDonHang.getSelectionModel().getSelectedItem());
-                }
-                else {
-                d.setSoLuong(d.getSoLuong() - 1);
-                dataDonHang.set(i, d);
+                } else {
+                    d.setSoLuong(d.getSoLuong() - 1);
+                    dataDonHang.set(i, d);
                 }
                 return;
             }
         }
+    }
+
+    public void payment(ActionEvent actionEvent) {
+//       SanPham sp = tableViewDonHang.getSelectionModel().getSelectedItem();
+        double total = 0;
+        for (int i = 0; i < dataDonHang.size(); i++) {
+            DonHang dh = dataDonHang.get(i);
+            total += dh.getThanhTien();
+        }
+    DoanhThu doanhThu1 = new DoanhThu();
+        doanhThu1.setSTT(dataDoanhThu.size() + 1);
+        doanhThu1.setThanhTien(total);
+        dataDoanhThu.add(doanhThu1);
     }
 }
